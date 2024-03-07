@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@keyframes girando {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+;
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bai Jamjuree", sans-serif;
+}
+
+body {
+    background: #f0f0f0;
+    transition: background 0.2s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: auto;
+    min-width: 375px;
+}
+
+body.dark {
+    background: #222222;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    width: 50px;
+    margin-inline: auto;
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(34px);
+}
+
+.fa-moon {
+    color: #dbdbdb;
+}
+
+.fa-sun {
+    color: #ffffff;
+}
+
+.cifrao.girando {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px auto;
+    border-radius: 100%;
+    animation: girando 15s linear infinite;
+}
+
+.cifrao img {
+    width: 250px;
+    height: 250px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: auto;
+    min-width: 375px;
+    border: 2px solid #00BF63;
+    border-radius: 20px;
+    background:#db8cff;
+    gap: 10px;
+}
+
+.seletor,
+.valor {
+    margin-top: 10px;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 500;
+}
+
+select,
+.input,
+.button {
+    min-width: 327px;
+    height: 48px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    opacity: .75;
+}
+
+.input {
+    min-width: 315px;
+}
+
+select:hover,
+.input:hover,
+.button:hover {
+    opacity: 1;
+}
+
+.button {
+    font-weight: 900;
+    margin: 20px 0;
+    color: #ffffff;
+    background: #00BF63;
+    box-shadow: 4px 4px 4px #00582e;
+}
+
+.resultado {
+    margin: 16px 24px 23px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 276px;
+    width: 327px;
+    border: 2px solid #00BF63;
+    border-radius: 20px;
+    font-family: "Bai Jamjuree", sans-serif;
+}
+
+.converterDe, .converterPara {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seta {
+    width: 50px;
+}
+
+p, h3 {
+    margin: 0;
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+    <div>
+        <input type="checkbox" class="checkbox" id="chk" />
+        <label class="label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+        </label>
+    </div>
+    <div class="cifrao girando">
+        <img src="./assets/logo.svg" alt="cifrão verde girando no sentido horário">
+    </div>
+    <main>
+        <label class="seletor">Converter de</label>
+        <select>
+            <option>Real (BRL)</option>
+            <option>Dólar (USD)</option>
+            <option>Euro (EUR)</option>
+            <option>Libra (GBP)</option>
+        </select>
+
+        <label class="seletor">Converter para</label>
+        <select>
+            <option>Real (BRL)</option>
+            <option>Dólar (USD)</option>
+            <option>Euro (EUR)</option>
+            <option>Libra (GBP)</option>
+        </select>
+
+        <label class="valor">Digite o valor</label>
+        <input class="input" type="text">
+
+        <button class="button">Converter</button>
+        <div class="resultado">
+            <div class="converterDe">
+                <img class="bandeira" src="./assets/bra.png" alt="bandeira do Brasil">
+                <p>Real (BRL)</p>
+                <h3>R$ 100,00</h3>
+            </div>
+
+            <img class="seta"
+                src="./assets/seta.png" alt="seta para baixo"/>
+
+            <div class="converterPara">
+                <img class="bandeira" src="./assets/bra.png" alt="bandeira do Brasil">
+                <p>Real (BRL)</p>
+                <h3>R$ 100,00</h3>
+            </div>
+
+    </main>
+</body>
+<script src="./script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+
+</html>
