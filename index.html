@@ -21,20 +21,22 @@
         <img src="./assets/logo.svg" alt="cifrão verde girando no sentido horário">
     </div>
     <main>
-        <label class="seletor">Converter de</label>
-        <select>
-            <option>Real (BRL)</option>
-            <option>Dólar (USD)</option>
-            <option>Euro (EUR)</option>
-            <option>Libra (GBP)</option>
+        <label class="seletor de" for="valueIn">Converter de</label>
+        <select name="moedaIn" id="valueIn">
+            <option id="selecionar" value="selecionar" selected>- Selecione uma moeda -</option>
+            <option value="real">Real (BRL)</option>
+            <option value="dolar">Dólar (USD)</option>
+            <option value="euro">Euro (EUR)</option>
+            <option value="libra">Libra (GBP)</option>
         </select>
 
-        <label class="seletor">Converter para</label>
-        <select>
-            <option>Real (BRL)</option>
-            <option>Dólar (USD)</option>
-            <option>Euro (EUR)</option>
-            <option>Libra (GBP)</option>
+        <label class="seletor para" for="valueOff">Converter para</label>
+        <select name="moedaOff" id="valueOff">
+            <option id="selecionar" value="selecionar" selected>- Selecione uma moeda -</option>
+            <option value="real">Real (BRL)</option>
+            <option value="dolar">Dólar (USD)</option>
+            <option value="euro">Euro (EUR)</option>
+            <option value="libra">Libra (GBP)</option>
         </select>
 
         <label class="valor">Digite o valor</label>
@@ -43,18 +45,18 @@
         <button class="button">Converter</button>
         <div class="resultado">
             <div class="converterDe">
-                <img class="bandeira" src="./assets/bra.png" alt="bandeira do Brasil">
-                <p>Real (BRL)</p>
-                <h3>R$ 100,00</h3>
+                <img class="bandeira" src="" alt="">
+                <p></p>
+                <h3></h3>
             </div>
 
             <img class="seta"
                 src="./assets/seta.png" alt="seta para baixo"/>
 
             <div class="converterPara">
-                <img class="bandeira" src="./assets/bra.png" alt="bandeira do Brasil">
-                <p>Real (BRL)</p>
-                <h3>R$ 100,00</h3>
+                <img class="bandeira" src="" alt="">
+                <p></p>
+                <h3></h3>
             </div>
 
     </main>
