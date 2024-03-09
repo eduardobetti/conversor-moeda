@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-@keyframes girando {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-;
-
 * {
     border: 0;
     margin: 0;
@@ -23,9 +11,6 @@
 body {
     background: #f0f0f0;
     transition: background 0.2s linear;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-inline: auto;
     min-width: 375px;
 }
@@ -34,27 +19,36 @@ body.dark {
     background: #222222;
 }
 
+.labelDarkTheme {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 315px;
+    justify-content: space-between;
+}
+
 .checkbox {
     opacity: 0;
     position: absolute;
 }
 
 .label {
-    background-color: #111;
-    border-radius: 50px;
+    background: transparent;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
     position: relative;
-    width: 50px;
+    width: 65px;
     margin-inline: auto;
-    border: 2px solid rgb(0, 88, 46);
+    border: 2px solid rgb(0, 191, 99, .5);
+    border-top: none;
 }
 
 .label .ball {
-    background-color: #fff;
+    background-color: rgb(0, 191, 99);
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -66,57 +60,46 @@ body.dark {
 }
 
 .checkbox:checked+.label .ball {
+    background-color: rgb(0, 88, 46);
     transform: translateX(34px);
 }
 
 .fa-moon {
-    color: #dbdbdb;
+    color: #222222;
 }
 
 .fa-sun {
-    color: #ffffff;
-}
-
-.cifrao.girando {
-    width: 300px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 12px auto;
-    border-radius: 100%;
-    animation: girando 15s linear infinite;
-}
-
-.cifrao img {
-    width: 250px;
-    height: 250px;
+    color: #444444;
 }
 
 main {
+    height: 95vh;
+    min-height: 440px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10px;
     margin-inline: auto;
-    min-width: 375px;
+    width: 375px;
     border: 2px solid rgb(0, 191, 99, .5);
     border-radius: 20px;
-    background:rgb(219, 140, 255, .5);
-    gap: 10px;
+    gap: 5px;
+    background: #d4d4d4;
 }
 
 .seletor,
-.valor {
+.valor,
+.aviso {
     margin-top: 10px;
     font-family: "Bai Jamjuree", sans-serif;
     font-weight: 500;
 }
 
 select,
-.input,
+.inputValor,
 .button {
     min-width: 327px;
-    height: 48px;
+    height: 36px;
     padding-left: 10px;
     border: none;
     outline: none;
@@ -126,26 +109,48 @@ select,
     box-shadow: 4px 4px 4px #444444;
 }
 
-.input {
-    min-width: 315px;
+.inputValor {
+    padding-left: 15px;
+}
+
+select {
+    cursor: pointer;
 }
 
 select:hover,
-.input:hover,
+.inputValor:hover,
 .button:hover {
     opacity: 1;
 }
 
+.botoes {
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+}
+
 .button {
     font-weight: 900;
-    margin: 20px 0;
+    margin-top: 20px;
     color: #ffffff;
     background: #00BF63;
     box-shadow: 4px 4px 4px #00582e;
+    cursor: pointer;
+}
+
+.fake {
+    background: #000000;
+    box-shadow: 4px 4px 4px #000000;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+#botaoReal, #botaoDolar, #botaoEuro, #botaoLibra {
+    display: none;
 }
 
 .resultado {
-    margin: 16px 24px 23px 24px;
+    margin: 0px 24px 15px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,7 +163,8 @@ select:hover,
     box-shadow: 4px 4px 4px #00582e;
 }
 
-.converterDe, .converterPara {
+.converterDe,
+.converterPara {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,10 +174,16 @@ select:hover,
     width: 50px;
 }
 
-p, h3 {
+p,
+h3 {
     margin: 0;
 }
 
-#selecionar {
+#selecionar, .inputValor::placeholder {
     text-align: center;
+    padding-left: 0;
+}
+
+.inputValor:focus::placeholder {
+    color: transparent
 }

@@ -9,30 +9,29 @@
 </head>
 
 <body>
-    <div>
-        <input type="checkbox" class="checkbox" id="chk" />
-        <label class="label" for="chk">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div class="ball"></div>
-        </label>
-    </div>
-    <div class="cifrao girando">
-        <img src="./assets/logo.svg" alt="cifrão verde girando no sentido horário">
-    </div>
     <main>
-        <label class="seletor de" for="valueIn">Converter de</label>
+        <div class="labelDarkTheme">
+            <div>
+                <input type="checkbox" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <label class="seletor de" for="valueIn">Converter de</label>
+        </div>
         <select name="moedaIn" id="valueIn">
-            <option id="selecionar" value="selecionar" selected>- Selecione uma moeda -</option>
+            <option value="0" id="selecionar">- Selecione a moeda -</option>
             <option value="real">Real (BRL)</option>
             <option value="dolar">Dólar (USD)</option>
             <option value="euro">Euro (EUR)</option>
             <option value="libra">Libra (GBP)</option>
         </select>
 
-        <label class="seletor para" for="valueOff">Converter para</label>
-        <select name="moedaOff" id="valueOff">
-            <option id="selecionar" value="selecionar" selected>- Selecione uma moeda -</option>
+        <label class="seletor para" for="valueOut">Converter para</label>
+        <select name="moedaOff" id="valueOut">
+            <option value="0" id="selecionar">- Selecione a moeda -</option>
             <option value="real">Real (BRL)</option>
             <option value="dolar">Dólar (USD)</option>
             <option value="euro">Euro (EUR)</option>
@@ -40,28 +39,31 @@
         </select>
 
         <label class="valor">Digite o valor</label>
-        <input class="input" type="text">
-
-        <button class="button">Converter</button>
+        <input class="inputValor" type="number" placeholder="- Digite o valor -">
+        <div id="botoes">
+            <button id="botaoFalso" class="button fake">Converter</button>
+            <button id="botaoReal" class="button">Converter</button>
+            <button id="botaoDolar" class="button">Converter</button>
+            <button id="botaoEuro" class="button">Converter</button>
+            <button id="botaoLibra" class="button">Converter</button>
+        </div>
+        <label class="aviso">Cotações de 08/03/2024</label>
         <div class="resultado">
             <div class="converterDe">
-                <img class="bandeira" src="" alt="">
-                <p></p>
-                <h3></h3>
+                <img src="" alt="" id="imgEntrada">
+                <p id="moedaEntrada">--</p>
+                <h3 id="valorConverter">--</h3>
             </div>
 
-            <img class="seta"
-                src="./assets/seta.png" alt="seta para baixo"/>
+            <img class="seta" src="./assets/seta.png" alt="seta para baixo" />
 
             <div class="converterPara">
-                <img class="bandeira" src="" alt="">
-                <p></p>
-                <h3></h3>
+                <img src="" alt="" id="imgSaida">
+                <p id="moedaSaida">--</p>
+                <h3 id="valorConvertido">--</h3>
             </div>
-
     </main>
 </body>
 <script src="./script.js"></script>
 <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
-
 </html>
