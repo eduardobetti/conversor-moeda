@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
-    border: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,17 +12,26 @@ body {
     transition: background 0.2s linear;
     margin-inline: auto;
     min-width: 375px;
+    color: black;
 }
 
 body.dark {
     background: #222222;
+    color: #f0f0f0;
 }
 
-.labelDarkTheme {
+.labelDarkTheme,
+.para,
+.valor {
     display: flex;
     flex-direction: row-reverse;
     width: 315px;
     justify-content: space-between;
+}
+
+.para,
+.valor {
+    flex-direction: row;
 }
 
 .checkbox {
@@ -60,12 +68,12 @@ body.dark {
 }
 
 .checkbox:checked+.label .ball {
-    background-color: rgb(0, 88, 46);
+    background-color: rgb(0, 191, 99, .75);
     transform: translateX(34px);
 }
 
 .fa-moon {
-    color: #222222;
+    color: #f0f0f0;
 }
 
 .fa-sun {
@@ -73,8 +81,7 @@ body.dark {
 }
 
 main {
-    height: 95vh;
-    min-height: 440px;
+    min-height: 620px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,7 +91,7 @@ main {
     border: 2px solid rgb(0, 191, 99, .5);
     border-radius: 20px;
     gap: 5px;
-    background: #d4d4d4;
+    background: transparent;
 }
 
 .seletor,
@@ -138,17 +145,6 @@ select:hover,
     cursor: pointer;
 }
 
-.fake {
-    background: #000000;
-    box-shadow: 4px 4px 4px #000000;
-    cursor: not-allowed;
-    opacity: 1;
-}
-
-#botaoReal, #botaoDolar, #botaoEuro, #botaoLibra {
-    display: none;
-}
-
 .resultado {
     margin: 0px 24px 15px 24px;
     display: flex;
@@ -179,11 +175,43 @@ h3 {
     margin: 0;
 }
 
-#selecionar, .inputValor::placeholder {
+#selecionar,
+.inputValor::placeholder {
     text-align: center;
     padding-left: 0;
 }
 
 .inputValor:focus::placeholder {
     color: transparent
+}
+
+@media (orientation: portrait) {
+    main {
+        height: 95vh;
+    }
+
+    .resultado {
+        margin: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        min-width: unset;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    select,
+    .inputValor,
+    .button,
+    .resultado,
+    .seletor,
+    .labelDarkTheme,
+    .valor {
+        min-width: unset;
+        width: 90%;
+    }
 }

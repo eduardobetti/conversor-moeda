@@ -39,15 +39,9 @@
         </select>
 
         <label class="valor">Digite o valor</label>
-        <input class="inputValor" type="number" placeholder="- Digite o valor -">
-        <div id="botoes">
-            <button id="botaoFalso" class="button fake">Converter</button>
-            <button id="botaoReal" class="button">Converter</button>
-            <button id="botaoDolar" class="button">Converter</button>
-            <button id="botaoEuro" class="button">Converter</button>
-            <button id="botaoLibra" class="button">Converter</button>
-        </div>
-        <label class="aviso">Cotações de 08/03/2024</label>
+        <input class="inputValor" type="number" step=".01" placeholder="- Digite o valor -">
+        <button id="botaoConverter" class="button btn-converter">Converter</button>
+        <p class="aviso">Cotações de 08/03/2024</p>
         <div class="resultado">
             <div class="converterDe">
                 <img src="" alt="" id="imgEntrada">
@@ -66,4 +60,5 @@
 </body>
 <script src="./script.js"></script>
 <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+
 </html>
