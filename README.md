@@ -1,13 +1,13 @@
 <h1>:heavy_dollar_sign: Conversor de Moedas :heavy_dollar_sign:</h1>
 <br>
 <b>MOCKUP SERÁ APRESENTADO NA VERSÃO FINAL DO PROJETO</b>
-<br>
+<br><br>
 <p>Versão 1.0 do Conversor de Moedas, projeto desenvolvido no módulo JavaScript pt.2 - WEB, da Trilha Full Stack PRO do Dev Club, sob mentoria do Professor Rodolfo Mori.</p>
 <p>Neste projeto fomos desafiados a replicar um modelo apresentado na plataforma FIGMA, em sua parte estética e também toda sua funcionalidade utilizando o aprendizado obtido em JavaScript</p>
 <p>A princípio tive algumas dificuldades em associar os conceitos de variável, função e evento, porém conforme ia tentando e revisando o conteúdo, fui conseguindo colocar em prática.</p>
 <p>Nesta versão inicial do projeto, está ausente a cotação em tempo real das moedas, razão pela qual está discriminada a data 08/03/2024 como a data em que as cotações foram obtidas no site do Banco Central do Brasil.</p>
-<p>Dentre as funções, foram utilizadas funções para aplicação de Dark Mode, um favorito desde programador, além é claro das funções de conversão de todas as 4 moedas apresentadas, Real, Dólar americano, Euro e Libra esterlina.</p>
-<p>Também foi possível aplicar as funções ocorrendo quando há a troca da moeda nos seletores de entrada e saída, desde que o valor inserido na input já tenha sido convertido anteriormente por meio do botão Converter.</p>
+<p>Dentre as funções, foram utilizadas funções para aplicação de Dark Mode, um favorito deste programador, além é claro das funções de conversão de todas as 4 moedas apresentadas, Real, Dólar americano, Euro e Libra esterlina.</p>
+<p>Também foi possível aplicar as funções ocorrendo quando há a troca da moeda nos seletores de entrada e saída.</p>
 <p>Por fim, também foi aplicado um design responsivo, para maior conforto do usuário, independentemente do dispositivo utilizado.</p>
 <p>Voltarei com atualizações assim que possível.</p>
 <br>
