@@ -112,7 +112,6 @@ select,
     outline: none;
     border-radius: 10px;
     font-size: 20px;
-    opacity: .75;
     box-shadow: 4px 4px 4px #444444;
 }
 
@@ -127,7 +126,13 @@ select {
 select:hover,
 .inputValor:hover,
 .button:hover {
-    opacity: 1;
+    opacity: .8;
+}
+
+select:active,
+.inputValor:active,
+.button:active {
+    opacity: .6;
 }
 
 .botoes {
@@ -186,12 +191,9 @@ h3 {
 }
 
 @media (orientation: portrait) {
-    main {
-        height: 95vh;
-    }
-
     .resultado {
-        margin: auto;
+        margin-inline: auto;
+        margin-block: 20px;
     }
 }
 
@@ -201,7 +203,8 @@ h3 {
     }
 
     main {
-        width: 100vw;
+        width: 95vw;
+        margin-bottom: 10px;
     }
 
     select,

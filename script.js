@@ -13,14 +13,15 @@ const moedaSaida = document.getElementById('moedaSaida')
 // função tema escuro
 chk.addEventListener('change', () => {
   if (document.body.classList.toggle('dark')) {
-    valueIn.style.boxShadow = '4px 4px 4px #f0f0f0'
-    valueOut.style.boxShadow = '4px 4px 4px #f0f0f0'
-    valor.style.boxShadow = '4px 4px 4px #f0f0f0'
-  } else {    
-    valueIn.style.boxShadow = '2px 2px 2px #444444'
-    valueOut.style.boxShadow = '2px 2px 2px #444444'
-    valor.style.boxShadow = '2px 2px 2px #444444'
-}})
+    valueIn.style.boxShadow = '4px 4px 4px #00BF63'
+    valueOut.style.boxShadow = '4px 4px 4px #00BF63'
+    valor.style.boxShadow = '4px 4px 4px #00BF63'
+  } else {
+    valueIn.style.boxShadow = '4px 4px 4px #444444'
+    valueOut.style.boxShadow = '4px 4px 4px #444444'
+    valor.style.boxShadow = '4px 4px 4px #444444'
+  }
+})
 
 //seletores de entrada
 function trocarMoedaEntrada() {
@@ -110,7 +111,7 @@ function trocarMoedaEntrada() {
 }
 valueIn.addEventListener('change', trocarMoedaEntrada)
 
-//seletor de saída
+//seletores de saída
 function trocarMoedaSaida() {
 
   if (valueOut.value == '0') {
@@ -144,7 +145,7 @@ function trocarMoedaSaida() {
   }
 
   if (valueOut.value == 'dolar') {
-    moedaSaida.innerHTML = 'Dólar americano'
+    moedaSaida.innerHTML = 'Dolar americano'
     imgSaida.src = './assets/usa.png'
     imgSaida.alt = 'bandeira dos Estados Unidos da América'
     valorConvertido.textContent = 'U$$ 0.00'
@@ -194,7 +195,7 @@ function trocarMoedaSaida() {
     imgSaida.src = './assets/libra.png'
     imgSaida.alt = 'bandeira da Grã-Bretanha'
     valorConvertido.textContent = '£ 0,00'
-    if (valueIn.value == 'real') { 
+    if (valueIn.value == 'real') {
       valorConverter.innerHTML = `${(valor.value / 1).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`
       valorConvertido.innerHTML = `${(valor.value / 6.401).toLocaleString('en-GB', { style: 'currency', currency: 'GBP' })}`
     }
@@ -204,11 +205,11 @@ function trocarMoedaSaida() {
     }
     if (valueIn.value == 'euro') {
       valorConverter.innerHTML = `${(valor.value / 1).toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}`
-      valorConvertido.innerHTML = `${(valor.value * 0.850).toLocaleString('en-GB', { style: 'currency', currency: 'GBP' })}`  
+      valorConvertido.innerHTML = `${(valor.value * 0.850).toLocaleString('en-GB', { style: 'currency', currency: 'GBP' })}`
     }
     if (valueIn.value == 'libra') {
       valorConverter.innerHTML = `${(valor.value / 1).toLocaleString('en-GB', { style: 'currency', currency: 'GBP' })}`
-      valorConvertido.innerHTML = `${(valor.value / 1).toLocaleString('en-GB', { style: 'currency', currency: 'GBP' })}`  
+      valorConvertido.innerHTML = `${(valor.value / 1).toLocaleString('en-GB', { style: 'currency', currency: 'GBP' })}`
     }
   }
 }

@@ -23,23 +23,23 @@
         </div>
         <select name="moedaIn" id="valueIn">
             <option value="0" id="selecionar">- Selecione a moeda -</option>
-            <option value="real">Real (BRL)</option>
-            <option value="dolar">Dólar (USD)</option>
-            <option value="euro">Euro (EUR)</option>
-            <option value="libra">Libra (GBP)</option>
+            <option value="real">R$ Real (BRL)</option>
+            <option value="dolar">$ Dólar (USD)</option>
+            <option value="euro">€ Euro (EUR)</option>
+            <option value="libra">£ Libra (GBP)</option>
         </select>
 
         <label class="seletor para" for="valueOut">Converter para</label>
         <select name="moedaOff" id="valueOut">
             <option value="0" id="selecionar">- Selecione a moeda -</option>
-            <option value="real">Real (BRL)</option>
-            <option value="dolar">Dólar (USD)</option>
-            <option value="euro">Euro (EUR)</option>
-            <option value="libra">Libra (GBP)</option>
+            <option value="real">R$ Real (BRL)</option>
+            <option value="dolar">$ Dólar (USD)</option>
+            <option value="euro">€ Euro (EUR)</option>
+            <option value="libra">£ Libra (GBP)</option>
         </select>
 
-        <label class="valor">Digite o valor</label>
-        <input class="inputValor" type="number" step=".01" placeholder="- Digite o valor -">
+        <label class="valor" for="valor">Digite o valor</label>
+        <input class="inputValor" id="valor" type="number" step=".01" placeholder="- Digite o valor -">
         <button id="botaoConverter" class="button btn-converter">Converter</button>
         <p class="aviso">Cotações de 08/03/2024</p>
         <div class="resultado">
