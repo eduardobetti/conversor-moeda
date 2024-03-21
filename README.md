@@ -1,6 +1,6 @@
 <h1>:heavy_dollar_sign: Conversor de Moedas :heavy_dollar_sign:</h1>
 <br>
-<b>MOCKUP SERÁ APRESENTADO NA VERSÃO FINAL DO PROJETO</b>
+<img src="https://github.com/eduardobetti/conversor-moeda/blob/master/assets/mockup-conversor-moeda.png?raw=true" alt="mockup-conversor-moeda">
 <br><br>
 <p>Versão 1.0 do Conversor de Moedas, projeto desenvolvido no módulo JavaScript pt.2 - WEB, da Trilha Full Stack PRO do Dev Club, sob mentoria do Professor Rodolfo Mori.</p>
 <p>Neste projeto fomos desafiados a replicar um modelo apresentado na plataforma FIGMA, em sua parte estética e também toda sua funcionalidade utilizando o aprendizado obtido em JavaScript</p>
