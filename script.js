@@ -65,7 +65,7 @@ function trocarMoedaEntrada() {
   }
 
   if (valueIn.value == 'dolar') {
-    moedaEntrada.innerHTML = 'Dolar americano'
+    moedaEntrada.innerHTML = 'Dólar americano'
     imgEntrada.src = './assets/usa.png'
     imgEntrada.alt = 'bandeira dos Estados Unidos da América'
     valorConverter.innerHTML = `${(valor.value / 1).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`
@@ -145,7 +145,7 @@ function trocarMoedaSaida() {
   }
 
   if (valueOut.value == 'dolar') {
-    moedaSaida.innerHTML = 'Dolar americano'
+    moedaSaida.innerHTML = 'Dólar americano'
     imgSaida.src = './assets/usa.png'
     imgSaida.alt = 'bandeira dos Estados Unidos da América'
     valorConvertido.textContent = 'U$$ 0.00'
